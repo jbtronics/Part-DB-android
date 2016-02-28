@@ -4,8 +4,11 @@
     <string name="scanning_success">Part found:</string>
     <string name="scanning_label">Scan Barcode!</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="action_settings">Settings</string>
 
     <!-- Strings related to Settings -->
+    <string name="pref_part_db_url_title">Part-DB URL</string>
+    <string name="pref_part_db_url_summ">URL to the Part-DB Directory</string>
 
     <!-- Example General settings -->
     <string name="pref_header_general">General</string>

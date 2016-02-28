@@ -17,7 +17,12 @@
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".barcode_scanner">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jbtronics.part_db.barcode_scanner" />
+        </activity>
     </application>
 
 </manifest>

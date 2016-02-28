@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:text="@string/scanning_label"
         android:id="@+id/btn_scan"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
         android:nestedScrollingEnabled="true"
-        android:onClick="scanBarcode" />
+        android:onClick="scanBarcode"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
