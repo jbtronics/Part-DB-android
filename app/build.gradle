@@ -9,8 +9,8 @@ android {
         applicationId "jbtronics.part_db"
         minSdkVersion 14
         targetSdkVersion 23
-
         versionName "1.0"
+        versionCode 1
     }
     buildTypes {
         release {
@@ -21,6 +21,8 @@ android {
             applicationIdSuffix 'debug'
             versionNameSuffix 'debug'
         }
+    }
+    productFlavors {
     }
 }
 
