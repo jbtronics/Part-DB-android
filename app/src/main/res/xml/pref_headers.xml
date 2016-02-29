@@ -7,5 +7,10 @@
         android:icon="@drawable/ic_info_black_24dp"
         android:title="@string/pref_header_general" />
 
+    <header
+        android:fragment="jbtronics.part_db.SettingsActivity$DebugPreferenceFragment"
+        android:icon="@drawable/ic_build_black_24dp"
+        android:title="@string/pref_header_debug" />
+
 
 </preference-headers>

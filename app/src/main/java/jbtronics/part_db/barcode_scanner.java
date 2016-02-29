@@ -2,7 +2,9 @@ package jbtronics.part_db;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -90,8 +92,20 @@ public class barcode_scanner extends AppCompatActivity {
 
     public void openPart(String pid)
     {
-        String url = "http://ras.pi/part-db/show_part_info.php?pid=";
+        SharedPreferences sPref = PreferenceManager.getDefaultSharedPreferences(this);
+        String server_url = sPref.getString("part_db_url", "");
+        String show_file  = sPref.getString("part_db_show_part_file","show_part_info.php?pid=");
 
+        //Ensure that server_url always ends with /
+        server_url = server_url.trim();
+        if(server_url.charAt(server_url.length()-1) != '/')
+        {
+           server_url = server_url + "/";
+        }
+
+        //Concatenate Strings to the URL
+        //String url = "http://ras.pi/part-db/show_part_info.php?pid=";
+        String url = server_url + show_file;
         url = url + pid;
 
         Intent i = new Intent(Intent.ACTION_VIEW);

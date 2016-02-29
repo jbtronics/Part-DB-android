@@ -3,13 +3,13 @@
     <!-- NOTE: EditTextPreference accepts EditText attributes. -->
     <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
     <EditTextPreference
-        android:defaultValue="http://server.de/part-db/"
-        android:key="part_db_url"
+        android:defaultValue="show_part_info.php?pid="
+        android:key="part_db_show_part_file"
         android:maxLines="1"
-        android:selectAllOnFocus="true"
+        android:selectAllOnFocus="false"
         android:singleLine="true"
-        android:title="@string/pref_part_db_url_title"
-        android:summary="@string/pref_part_db_url_summ"
+        android:title="@string/pref_part_db_show_part_file_title"
+        android:summary="@string/pref_part_db_show_part_file_summ"
         />
 
 
