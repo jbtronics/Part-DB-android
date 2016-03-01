@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~     Part-DB-android: An Android Barcode Scanner for Part-DB
+  ~     Copyright (C) 2016 by Jan Boehmer
+  ~
+  ~     This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<resources>
+    <string name="app_name">Part-DB</string>
+  <string name="action_settings">Einstellungen</string>
+  <string name="pref_header_debug">Entwicklungseinstellungen</string>
+  <string name="pref_header_general">Allgemein</string>
+  <string name="pref_part_db_show_part_file_summ">Dateiname der PHP-Datei, die die Bauteildetails anzeigt</string>
+  <string name="pref_part_db_show_part_file_title">Dateiname der Detail PHP Seite</string>
+  <string name="pref_part_db_url_summ">URL zum Part-DB Verzeichniss</string>
+  <string name="pref_part_db_url_title">Part-DB URL</string>
+  <string name="pref_ringtone_silent">Klingelton aus</string>
+  <string name="scanning_error">Fehler beim Scannen des Barcodes</string>
+  <string name="scanning_label">Barcode scannen!</string>
+  <string name="scanning_success">Bauteil gefunden:</string>
+  <string name="title_activity_settings">Einstellungen</string>
+</resources>
