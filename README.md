@@ -7,3 +7,22 @@ For the App you need the ZXing Barcode Scanner installed and Android 4.0 or abov
 For the first Start you has to go to Settings --> General --> Server URL and input there the URL of your part-db Directory on your Server: 
 (for example: yourserver.de/part-db ). Then go back on the main site and click on Scan Barcode, then it opens ZXing Reader and when he founds an
 Barcode, it opens the Details site of the Part in your default browser.
+
+
+License Infos: 
+
+Part-DB-android: An Android Barcode Scanner for Part-DB
+      Copyright (C) 2016 by Jan Boehmer
+ 
+      This program is free software: you can redistribute it and/or modify
+      it under the terms of the GNU General Public License as published by
+      the Free Software Foundation, either version 3 of the License, or
+      (at your option) any later version.
+ 
+      This program is distributed in the hope that it will be useful,
+      but WITHOUT ANY WARRANTY; without even the implied warranty of
+      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+      GNU General Public License for more details.
+ 
+      You should have received a copy of the GNU General Public License
+      along with this program.  If not, see <http://www.gnu.org/licenses/>.
