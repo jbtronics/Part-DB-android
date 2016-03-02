@@ -57,6 +57,9 @@ public class barcode_scanner extends AppCompatActivity {
                 Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
 
+            case R.id.action_scan_browser:
+                scanBarcode(null);
+
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
