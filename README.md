@@ -8,10 +8,13 @@ For the first Start you has to go to Settings --> General --> Server URL and inp
 (for example: yourserver.de/part-db ). Then go back on the main site and click on Scan Barcode, then it opens ZXing Reader and when he founds an
 Barcode, it opens the Details site of the Part in your default browser.
 
+When you want to use the feature to show Part Details internally (now Name, Description, Stock informations and Comment only) you has to
+add the show_data.php from the apk folder to your Part-DB Server directory.
+
 
 License Infos: 
 
-Part-DB-android: An Android Barcode Scanner for Part-DB
+       Part-DB-android: An Android Barcode Scanner for Part-DB
       Copyright (C) 2016 by Jan Boehmer
  
       This program is free software: you can redistribute it and/or modify

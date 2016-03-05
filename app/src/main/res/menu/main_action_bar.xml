@@ -6,6 +6,11 @@
         android:icon="@drawable/ic_linked_camera_white_24dp"
         app:showAsAction="always"/>
 
+    <item android:id="@+id/action_scan_internal"
+        android:title="Scan Barcode and open internal"
+        android:icon="@drawable/ic_camera_white_24dp"
+        app:showAsAction="always" />
+
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:icon="@drawable/ic_settings_white_24dp"

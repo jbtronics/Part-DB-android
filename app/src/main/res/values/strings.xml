@@ -20,5 +20,7 @@
     <string name="pref_part_db_show_part_file_summ">Filename of the PHP, which shows the Part Details</string>
 
     <string name="pref_ringtone_silent">Ringtone Silent</string>
+    <string name="detail_instock">Instock:</string>
+    <string name="detail_mininstock">Min in Stock:</string>
 
 </resources>

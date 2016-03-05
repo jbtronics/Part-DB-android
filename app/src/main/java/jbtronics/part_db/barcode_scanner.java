@@ -35,6 +35,9 @@ import android.widget.Toast;
 
 public class barcode_scanner extends AppCompatActivity {
 
+
+    public boolean openinbrowser = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,9 +59,19 @@ public class barcode_scanner extends AppCompatActivity {
                 // User chose the "Settings" item, show the app settings UI...
                 Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
+                break;
 
             case R.id.action_scan_browser:
                 scanBarcode(null);
+                openinbrowser = true;
+                break;
+
+            case R.id.action_scan_internal:
+                scanBarcode(null);
+                openinbrowser = false;
+                break;
+
+
 
             default:
                 // If we got here, the user's action was not recognized.
@@ -66,6 +79,7 @@ public class barcode_scanner extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
 
         }
+        return super.onOptionsItemSelected(item);
     }
 
 
@@ -98,8 +112,13 @@ public class barcode_scanner extends AppCompatActivity {
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
 
-                //Open Browser with Part Details
-                openPart(pid);
+                if(openinbrowser) {
+                    //Open Browser with Part Details
+                    openPartBrowser(pid);
+                }
+                else {
+                    openPartInternal(pid);
+                }
 
             } else if (resultCode == RESULT_CANCELED) {
                 Context context = getApplicationContext();
@@ -111,7 +130,7 @@ public class barcode_scanner extends AppCompatActivity {
         }
     }
 
-    public void openPart(String pid)
+    public void openPartBrowser(String pid)
     {
         SharedPreferences sPref = PreferenceManager.getDefaultSharedPreferences(this);
         String server_url = sPref.getString("part_db_url", "");
@@ -131,6 +150,13 @@ public class barcode_scanner extends AppCompatActivity {
 
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
+        startActivity(i);
+    }
+
+    public void openPartInternal(String pid)
+    {
+        Intent i = new Intent(this, PartDetails.class);
+        i.putExtra("pid",pid);
         startActivity(i);
     }
 

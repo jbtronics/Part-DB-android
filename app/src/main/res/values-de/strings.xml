@@ -32,4 +32,6 @@
   <string name="scanning_success">Bauteil gefunden:</string>
   <string name="title_activity_settings">Einstellungen</string>
   <string name="action_scan_browser">Scan Barcode und öffne Bauteil im Browser</string>
+  <string name="detail_instock">Vorhanden</string>
+  <string name="detail_mininstock">Min. Bestand:</string>
 </resources>
