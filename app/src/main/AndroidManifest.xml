@@ -23,7 +23,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="jbtronics.part_db.barcode_scanner" />
         </activity>
-        <activity android:name=".PartDetails"/>
+        <activity android:name=".PartDetails"
+            android:parentActivityName=".barcode_scanner">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jbtronics.part_db.barcode_scanner" />
+        </activity>
 
 
     </application>

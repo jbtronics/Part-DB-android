@@ -34,4 +34,7 @@
   <string name="action_scan_browser">Scan Barcode und öffne Bauteil im Browser</string>
   <string name="detail_instock">Vorhanden</string>
   <string name="detail_mininstock">Min. Bestand:</string>
+  <string name="details_category">Kategorie:</string>
+  <string name="details_footprint">Footprint:</string>
+  <string name="details_storelocation">Lagerort:</string>
 </resources>

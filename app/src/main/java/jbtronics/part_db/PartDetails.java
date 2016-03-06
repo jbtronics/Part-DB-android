@@ -28,6 +28,8 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -46,7 +48,7 @@ public class PartDetails extends AppCompatActivity {
     public Part part;
 
     //Views
-    private TextView text_name, text_desc, text_instock, text_mininstock, text_comment;
+    private TextView text_name, text_desc, text_instock, text_mininstock, text_comment, text_category, text_footprint, text_storelocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +73,9 @@ public class PartDetails extends AppCompatActivity {
         text_instock = (TextView) findViewById(R.id.detail_text_instock);
         text_mininstock = (TextView) findViewById(R.id.detail_text_mininstock);
         text_comment = (TextView) findViewById(R.id.detail_text_comment);
+        text_category = (TextView) findViewById(R.id.detail_text_category);
+        text_footprint = (TextView) findViewById(R.id.detail_text_footprint);
+        text_storelocation = (TextView) findViewById(R.id.detail_text_storelocation);
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -125,6 +130,9 @@ public class PartDetails extends AppCompatActivity {
         text_instock.setText(String.valueOf(p.getInstock()));
         text_mininstock.setText(String.valueOf(p.getMininstock()));
         text_comment.setText(p.getComment());
+        text_category.setText(p.getCategory());
+        text_footprint.setText(p.getFootprint());
+        text_storelocation.setText(p.getStorelocation());
     }
 
     public String DownloadString(String url_str) {

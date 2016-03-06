@@ -27,6 +27,9 @@ public class Part {
     private Integer instock;
     private Integer mininstock;
     private String comment;
+    private String category;
+    private String footprint;
+    private String storelocation;
 
     public Part(String pid, String name, String description)
     {
@@ -66,6 +69,15 @@ public class Part {
                     break;
                 case 5:
                     setComment(datas[n]);
+                    break;
+                case 6:
+                    setCategory(datas[n]);
+                    break;
+                case 7:
+                    setFootprint(datas[n]);
+                    break;
+                case 8:
+                    setStorelocation(datas[n]);
                     break;
             }
         }
@@ -151,5 +163,29 @@ public class Part {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getFootprint() {
+        return footprint;
+    }
+
+    public void setFootprint(String footprint) {
+        this.footprint = footprint;
+    }
+
+    public String getStorelocation() {
+        return storelocation;
+    }
+
+    public void setStorelocation(String storelocation) {
+        this.storelocation = storelocation;
     }
 }

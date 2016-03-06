@@ -22,5 +22,8 @@
     <string name="pref_ringtone_silent">Ringtone Silent</string>
     <string name="detail_instock">Instock:</string>
     <string name="detail_mininstock">Min in Stock:</string>
+    <string name="details_category">Category:</string>
+    <string name="details_footprint">Footprint:</string>
+    <string name="details_storelocation">Store Location:</string>
 
 </resources>
