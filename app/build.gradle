@@ -9,8 +9,8 @@ android {
         applicationId "jbtronics.part_db"
         minSdkVersion 14
         targetSdkVersion 23
-        versionName '0.2'
-        versionCode 3
+        versionName '0.2.1'
+        versionCode 4
     }
     buildTypes {
         release {

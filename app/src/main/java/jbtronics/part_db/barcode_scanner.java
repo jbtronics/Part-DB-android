@@ -36,7 +36,7 @@ import android.widget.Toast;
 public class barcode_scanner extends AppCompatActivity {
 
 
-    public boolean openinbrowser = true;
+    public boolean openinbrowser = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
