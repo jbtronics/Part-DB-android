@@ -32,7 +32,7 @@ include_once('start_session.php');
 $messages = array();
 $fatal_error = false; // if a fatal error occurs, only the $messages will be printed, but not the site content
 
-function print_details(Part &$p)
+function print_details(Part $p)
 {
     try {
         //Get Infos
@@ -49,18 +49,23 @@ function print_details(Part &$p)
         $product_url = $p -> get_manufacturer_product_url();
         $pic_filename = $p -> get_master_picture_filename(true);
         
+        $category           = $p->get_category();
+        $footprint          = $p->get_footprint();
+        $storelocation      = $p->get_storelocation();
+        $manufacturer       = $p->get_manufacturer();
+        $all_orderdetails   = $p->get_orderdetails();
         
-        //$footprint          = $part->get_footprint();
-        //$storelocation      = $part -> get_storelocation();
-        //$manufacturer       = $part->get_manufacturer();
-        //$category           = $part->get_category();
-        //$all_orderdetails   = $part->get_orderdetails();
+        $category_str = is_object($category) ? $category->get_name() : '';
+        $footprint_str = is_object($footprint) ? $footprint->get_name() : '';
+        $storelocation_str = is_object($storelocation) ? $storelocation->get_name() : '';
+   
         
         //Output Data Format
-        print("PID@NAME@DESCRIPTION@INSTOCK@MININSTOCK@COMMENT@<p>\n");
+        print("PID@NAME@DESCRIPTION@INSTOCK@MININSTOCK@COMMENT@CATEGORY@FOOTPRINT@STORELOCATION@<p>\n");
         
         //Print the real Part Data
-        print($id . "@" . $name . "@" . $desc . "@" . $instock . "@" . $mininstock . "@" . $comment . "@<p>\n");
+        print($id . "@" . $name . "@" . $desc . "@" . $instock . "@" . $mininstock . "@" . $comment . "@" . $category_str 
+                  . "@" . $footprint_str.  "@" . $storelocation_str . "@<p>\n");
     }
     catch (Exception $e)
     {
@@ -88,11 +93,14 @@ try
         $log                = new Log($database);
         $current_user       = new User($database, $current_user, $log, 1); // admin
         $part               = new Part($database, $current_user, $log, $part_id);
+        
+        
         $footprint          = $part->get_footprint();
         $storelocation      = $part->get_storelocation();
         $manufacturer       = $part->get_manufacturer();
         $category           = $part->get_category();
         $all_orderdetails   = $part->get_orderdetails();
+        
         
         print_details($part);
     }
